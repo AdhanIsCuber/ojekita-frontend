@@ -1,0 +1,379 @@
+$font-1: 'Work Sans', Arial, sans-serif; // color
+$font-2: 'Roboto Slab', serif;
+$color-1: #ffc107;
+
+$brand-primary: #0C9CEE !default;
+$brand-secondary: #f35f55 !default;
+
+$brand-white: #fff;
+$brand-black: #000;
+$brand-darker: #444;
+$brand-gray: #ccc;
+$brand-lighter: #e9e9e9;
+$brand-body-color: #818892;
+$brand-selection-color: #f9f6f0;
+$brand-overlay-color: #3b3d40;
+$brand-bg-color: $brand-white;
+// Mixin
+@mixin translateX($translatex) {
+	-moz-transform: translateX($translatex);
+	-webkit-transform: translateX($translatex);
+	-ms-transform: translateX($translatex);
+	-o-transform: translateX($translatex);
+	transform: translateX($translatex);
+}
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease;
+    -o-transition:      all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: 		all $transition ease;
+    transition:         all $transition ease;
+}
+@mixin inline-block() {
+	display:-moz-inline-stack;
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin flex() {
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+}
+@mixin flexwrap() {
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+}
+
+// Mixins
+@import "mdb/free/data/mixins";
+
+@import "mdb/free/data/colors";
+
+// Variables
+@import "mdb/free/data/variables";
+
+body {
+    font-family: $font-1;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #6f6f6f;
+    background-color: rgba(255, 171, 0, 0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #e96900;
+    font-family: $font-1;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+.custom-navbar {
+  background-color: $color-1;
+
+  .navbar-brand {
+    background: url("/img/logo-ori.png") no-repeat center center;
+    background-size: 122px 36px;
+    height: 65px;
+    display: block;
+    text-indent: -9999px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .label-atas {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px !important;
+    display: block;
+  }
+
+  .unduh {
+    padding: 6px 25px !important;
+    border: 2px solid #fff;
+    width: auto;
+    border-radius: 3rem;
+    margin-left: 10px;
+  }
+}
+
+.carousel {
+  height: 100vh;
+}
+
+
+
+.testimonial {
+  .avatar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 2rem;
+
+    img {
+      max-width: 200px;
+    }
+  }
+}
+
+#ctpro-gallery {
+	width: 100%;
+	float: right;
+  max-height: 550px;
+    padding: 0 150px !important;
+	@include transition(.5s);
+	@media screen and (max-width: $large-screen) {
+		width: 70%;
+	}
+	@media screen and (max-width: $small-screen) {
+		width: 100%;
+	}
+	.ctpro-narrow-content {
+		position: relative;
+		width: 80%;
+		margin: 0 auto;
+		padding: 4em 0;
+		@media screen and (max-width: $small-screen) {
+			width: 100%;
+			padding: 3.5em 1em;
+		}
+	}
+}
+
+
+
+.team-gallery {
+	position: relative;
+	margin-bottom: 7em;
+	float: right;
+	width: 100%;
+
+
+	.gallery-item {
+		width: 33.3333%;
+		position: relative;
+		overflow: hidden;
+		display: block;
+		float: left;
+		z-index: 90;
+		img {
+			position: relative;
+			max-width: 100%;
+			-webkit-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			transform: scale(1.2);
+			@include transition(.9s);
+		}
+		@media screen and (max-width: $large-screen) {
+			width: 25%;
+		}
+		@media screen and (max-width: $medium-screen) {
+			width: 50%;
+		}
+		@media screen and (max-width: $small-screen) {
+			width: 100%;
+		}
+		.overlay {
+			position: absolute;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			top: 0;
+			z-index: 11;
+			vertical-align: middle;
+			padding-top: 30%;
+			visibility: hidden;
+			opacity: 0;
+			@include transition(.5s);
+			h2, span {
+				position: relative;
+				z-index: 12;
+				margin-bottom: 0;
+				text-align: center;
+				display: block;
+				@include transition(.3s);
+			}
+			h2 {
+				color: $brand-white;
+				font-size: 26px;
+				font-weight: 300;
+				margin-bottom: 10px;
+				bottom: -15px;
+				@media screen and (max-width: $small-screen) {
+					font-size: 18px;
+				}
+			}
+			span {
+				color: $brand-primary;
+				color: rgba(255,255,255,.7);
+				font-size: 11px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				font-weight: 400;
+				bottom: -5px;
+				visibility: hidden;
+				opacity: 0;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background: rgba(0, 0, 0, .5);
+			}
+		}
+		&:hover {
+			img {
+				-webkit-transform: scale(1.0);
+				-moz-transform: scale(1.0);
+				-ms-transform: scale(1.0);
+				-o-transform: scale(1.0);
+				transform: scale(1.0);
+			}
+			.overlay {
+				visibility: visible;
+				opacity: 1;
+				&:before {
+					content: '';
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					background: rgba(0, 0, 0, .5);
+				}
+
+				h2 {
+					bottom: 0px;
+				}
+				span {
+					visibility: visible;
+					opacity: 1;
+					bottom: 0px;
+				}
+			}
+		}
+	}
+}
+
+.gallery {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* Footer */
+.logo-footer {
+  padding: 50px 0;
+  display: block;
+}
+
+.intro-ojekita-2 {
+  height: 70vh;
+  padding: 20px 0;
+  margin: -25px 0;
+}
+
+.page-footer * {
+  color: #e96900 !important;
+}
+
+.bad img {
+  max-width: 130px;
+}
+
+.fitur-ojekita {
+  background-color: #ffb319;
+}
+
+.card-block {
+  min-height: 150px;
+  max-height: 150px;
+}
+
+.card-footer {
+  background-color: #ffb319;
+  color: #fff;
+  min-height: 50px;
+
+  h5 {
+    color: #fff;
+    margin-top: 5px;
+  }
+}
+
+.ojekita-con {
+  margin-left: 0px !important;
+  width: 1340px !important;
+}
+
+.logo-side {
+  img {
+    max-width: 170px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+}
+
+.testimonial-caro {
+  height: auto !important;
+}
+
+
+
+span.line_short {
+
+    border-bottom: 5px solid $color-1;
+}
+
+
+.section-career {
+  margin-top: 5rem;
+  h1 {
+    color: $brand-darker !important;
+    font-family: $font-1;
+
+  }
+  h4 {
+    font-family: $font-1;
+  }
+}
+
+.contact-ojekita {
+  margin-left: 20px;
+
+  a {
+    color: inherit;
+  }
+}
+
+.hubungikami {
+	min-height: 80vh;
+
+  .jarak {
+    margin-top: 70px;
+  }
+}
