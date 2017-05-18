@@ -2858,8 +2858,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-block {
-  min-height: 150px;
-  max-height: 150px;
+  min-height: 170px;
+  max-height: 170px;
+}
+.card-block .card-title {
+  min-height: 70px;
+  max-height: 70px;
+}
+.card-block .card-footer:last-child {
+  border-radius: 7px;
 }
 
 .card-footer {
