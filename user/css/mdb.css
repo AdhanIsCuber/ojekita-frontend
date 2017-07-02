@@ -5423,7 +5423,7 @@ button:focus {
 .btn-orange {
   background: #e65100; }
   .btn-orange:hover, .btn-orange:focus {
-    background-color: #ff5a00 !important; }
+    background-color: #ff5a01 !important; }
   .btn-orange.active {
     background-color: #802d00 !important; }
 
@@ -6715,7 +6715,7 @@ body.scrollable {
 .modal-dialog.modal-notify.modal-info .btn-primary-modal {
   background: #5394ff; }
   .modal-dialog.modal-notify.modal-info .btn-primary-modal:hover, .modal-dialog.modal-notify.modal-info .btn-primary-modal:focus, .modal-dialog.modal-notify.modal-info .btn-primary-modal:active {
-    background-color: #6ca4ff !important; }
+    background-color: #6da4ff !important; }
   .modal-dialog.modal-notify.modal-info .btn-primary-modal.active {
     background-color: #0059ec !important; }
 .modal-dialog.modal-notify.modal-info .btn-outline-secondary-modal {
@@ -6760,7 +6760,7 @@ body.scrollable {
 .modal-dialog.modal-notify.modal-danger .btn-primary-modal {
   background: #ff4b4b; }
   .modal-dialog.modal-notify.modal-danger .btn-primary-modal:hover, .modal-dialog.modal-notify.modal-danger .btn-primary-modal:focus, .modal-dialog.modal-notify.modal-danger .btn-primary-modal:active {
-    background-color: #ff6464 !important; }
+    background-color: #ff6565 !important; }
   .modal-dialog.modal-notify.modal-danger .btn-primary-modal.active {
     background-color: #e40000 !important; }
 .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal {

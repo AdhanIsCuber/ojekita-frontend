@@ -2605,7 +2605,12 @@ body {
   background-color: rgba(255, 171, 0, 0);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #e96900;
   font-family: "Work Sans", Arial, sans-serif;
   font-weight: 400;
@@ -2638,8 +2643,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 10px;
 }
 
-.carousel {
-  height: 100vh;
+.carousel .view img {
+  width: 100%;
+}
+
+.half-ojekita {
+  min-height: 200px;
 }
 
 .testimonial .avatar {
@@ -2753,7 +2762,8 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.team-gallery .gallery-item .overlay h2, .team-gallery .gallery-item .overlay span {
+.team-gallery .gallery-item .overlay h2,
+.team-gallery .gallery-item .overlay span {
   position: relative;
   z-index: 12;
   margin-bottom: 0;
@@ -2889,6 +2899,18 @@ span.line_short {
 }
 .hubungikami .jarak {
   margin-top: 70px;
+}
+
+.fitur-img img {
+  border-radius: 50%;
+  width: 85%;
+}
+
+.fitur {
+  height: 300px;
+}
+.fitur .fitur-desc {
+  margin-top: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */
