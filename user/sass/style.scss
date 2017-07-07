@@ -98,10 +98,44 @@ h6 {
         padding: 0;
     }
     .label-atas {
-        position: absolute;
         left: 50%;
         margin-left: -100px !important;
+        position: absolute;
         display: block;
+
+        @media screen and (max-width: $large-screen) {
+            left: 50%;
+            margin-left: -5% !important;
+            position: absolute;
+            display: block;
+  
+            img {
+                max-height: 25px;
+                margin-top: 0px;
+            }
+        }
+        @media screen and (max-width: $medium-screen) {
+            left: 75%;
+            margin-left: -33% !important;
+            position: absolute;
+            display: block;
+
+            img {
+                max-height: 25px;
+                margin-top: -55px;
+            }
+        }
+        @media screen and (max-width: $small-screen) {
+               left: 25%;
+    margin-left: 10% !important;
+    position: absolute;
+    display: block;
+
+            img {
+                max-height: 25px;
+                margin-top: -55px;
+            }
+        }
     }
     .unduh {
         padding: 6px 25px !important;

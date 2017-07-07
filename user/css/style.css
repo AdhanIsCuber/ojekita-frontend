@@ -2630,10 +2630,46 @@ h6 {
   padding: 0;
 }
 .custom-navbar .label-atas {
-  position: absolute;
   left: 50%;
   margin-left: -100px !important;
+  position: absolute;
   display: block;
+}
+@media screen and (max-width: 1200px) {
+  .custom-navbar .label-atas {
+    left: 50%;
+    margin-left: -5% !important;
+    position: absolute;
+    display: block;
+  }
+  .custom-navbar .label-atas img {
+    max-height: 25px;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .custom-navbar .label-atas {
+    left: 75%;
+    margin-left: -33% !important;
+    position: absolute;
+    display: block;
+  }
+  .custom-navbar .label-atas img {
+    max-height: 25px;
+    margin-top: -55px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .custom-navbar .label-atas {
+    left: 25%;
+    margin-left: 10% !important;
+    position: absolute;
+    display: block;
+  }
+  .custom-navbar .label-atas img {
+    max-height: 25px;
+    margin-top: -55px;
+  }
 }
 .custom-navbar .unduh {
   padding: 6px 25px !important;
